@@ -55,7 +55,8 @@ height: 460px;
   border-radius: 25px;
   border: none;
   font-size: 15px;
- font-family: 'Lexend Deca', sans-serif;;
+ font-family: 'Lexend Deca', sans-serif;
+  cursor:pointer;
 }
 
 .Sedans {
@@ -73,14 +74,30 @@ height: 460px;
 }
 .Sedans button{
   color: var(--Brightorange);
+  transition: 0.4s;
+}
+.Sedans button:hover{
+  background: var(--Brightorange);
+  color: var(--Verylightgray);
+  border: 1px solid var(--Verylightgray);
 }
 .SUVs button{
   color: var(--Darkcyan);
-  
+    transition: 0.4s;
+}
+.SUVs button:hover{
+  background: var(--Darkcyan);
+  color: var(--Verylightgray);
+  border: 1px solid var(--Verylightgray);
 }
 .Luxury button{
   color: var(--Verydarkcyan);
-
+    transition: 0.4s;
+}
+.Luxury button:hover{
+  background: var(--Verydarkcyan);
+  color: var(--Verylightgray);
+  border: 1px solid var(--Verylightgray);
 }
 @media screen and (max-width:500px) {
   body{
