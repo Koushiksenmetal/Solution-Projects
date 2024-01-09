@@ -1,0 +1,160 @@
+*{
+  margin: 0;
+  padding: 0;
+   box-sizing: border-box;
+}
+
+:root{
+  --Softblue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+--Verydarkblue : hsl(217, 54%, 11%);
+--Verydarkbluecard : hsl(216, 50%, 16%);
+--Verydarkblueline : hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+--primaryfont:'Outfit', sans-serif;
+}
+html,body{
+  height: 100%;
+}
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ background: var(--Verydarkblue);
+}
+.main{
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+.card-image{
+  position:relative;
+  cursor: pointer;
+}
+.empty{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  bottom: 0;
+  right: 0;
+  background: var(--Cyan);
+  opacity: 0.4;
+  display:none;
+  border-radius: 10px;
+}
+.icon{
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+}
+
+.card-image:hover .empty,
+.card-image:hover .icon
+{
+display:block;
+}
+
+.card{
+  width: 355px;
+  /* height: 600px; */
+ background-color: var(--Verydarkbluecard);
+ padding: 20px 25px;
+ border-radius: 10px;
+ box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.6);
+}
+
+.card-body{
+  padding: 20px 5px;
+}
+.card-body a{
+  color: var(--White);
+  font-family: var(--primaryfont);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 27px;
+  cursor:pointer;
+  transition: 0.1s;
+}
+.card-body a:hover{
+color: var(--Cyan);
+}
+
+.card-body p{
+  font-family: var(--primaryfont);
+  color: var(--Softblue);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  padding-top: 10px;
+
+}
+.about{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.date{
+  display: flex;
+  gap: 10px;
+  font-family: var(--primaryfont);
+  color: var(--Softblue);
+}
+.date img{
+  height: 20px;
+  width: 20px;
+  
+}
+
+.about .feature{
+  display: flex;
+  flex-basis: 50%; 
+  gap:10%;
+  font-family: var(--primaryfont);
+  color: var(--Cyan);
+  font-weight:300 ;
+}
+
+
+.feature img{
+  height: 20px;
+  width: 20px;
+}
+
+section{
+  display:flex;
+  gap:5%;
+}
+
+section h4{
+  font-family: var(--primaryfont);
+  color: var(--White);
+  position: relative;
+  top:5px;
+  font-weight: 300;
+  cursor:pointer;
+  transition: 0.2s;
+}
+section h4:hover{
+color:var(--Cyan)
+}
+
+section span{
+  color: var(--Softblue);
+}
+
+section img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+}
+
