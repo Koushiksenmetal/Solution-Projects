@@ -1,0 +1,218 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+:root{
+  /* primary color */
+--Lightred: hsl(0, 100%, 67%);
+--Orangeyyellow: hsl(39, 100%, 56%);
+--Greenteal: hsl(166, 100%, 37%);
+--Cobaltblue: hsl(234, 85%, 45%);
+  /* Gradients */
+--Lightslateblue: hsl(252, 100%, 67%);
+--Lightroyalblue : hsl(241, 81%, 54%);
+
+--Violetblue : hsla(256, 72%, 46%, 1);
+--Persianblue : hsla(241, 72%, 46%, 0);
+     /* Neutral */
+   
+--White: hsl(0, 0%, 100%);
+--Paleblue: hsl(221, 100%, 96%);
+--Lightlavender: hsl(241, 100%, 89%);
+--Darkgrayblue: hsl(224, 30%, 27%);
+
+--font: 'Hanken Grotesk', sans-serif;
+
+}
+body,html{
+  height:100%
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card{
+  width:737px;
+  display:flex;
+  box-shadow: 1px 0px 20px 2px rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+}
+.card-image{
+  flex-basis: 50%;
+  text-align: center;
+  /* background:var(--Lightroyalblue) ; */
+  background: linear-gradient(var(--Lightroyalblue),var(--Lightslateblue));
+  padding: 35px ;
+  border-radius: 30px;
+
+}
+.card-image h2{
+  margin-bottom: 33px;
+  font-family: var(--font);
+  color: var(--Lightlavender);
+  opacity:0.8
+}
+
+.result{
+ display:flex;
+  background:linear-gradient(var(--Violetblue),var(--Persianblue)) ;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+ border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+}
+.result .score{
+  font-family: var(--font);
+  color: var(--White);
+  margin-top: 2px;
+  font-size: 70px;
+  font-weight: 800;
+ 
+}
+.result h5{
+color: var(--Lightlavender);
+font-family: var(--font);
+opacity: 0.8;
+font-weight: 300;
+font-size: larger;
+
+}
+
+.card-image .heading{
+  color: var(--White);
+  font-family: var(--font);
+  padding-bottom: 10px;
+  padding-top: 30px;
+}
+.card-image p{
+  font-size:15px;
+  font-family: var(--font);
+  color:var(--Lightlavender);
+  opacity: 0.8;
+}
+.card-stats {
+flex-basis: 50%;
+padding:32px 35px;
+}
+
+.card-stats h2{
+font-family:var(--font);
+font-weight: 700;
+color: var(--Darkgrayblue);
+padding-bottom: 20px;
+}
+
+ .Reaction,.Memory,.Verbal,.Visual{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-family:var(--font) ;
+  font-weight: 700;
+  font-size: 20px;
+  padding:20px;
+  border-radius: 10px;
+}
+.card-stats img{
+  position:relative;
+  top:11%;
+}
+.Reaction{
+  background:hsla(0, 100%, 67%,0.1);
+}
+.Reaction .marks{
+color: var(--Lightred);
+}
+.Memory .marks2{
+color: var(--Orangeyyellow);
+}
+.Verbal .marks3{
+color: var(--Greenteal);
+}
+.Visual .marks4{
+color: var(--Cobaltblue);
+}
+.numbers span{
+  color:var(--Darkgrayblue);
+  opacity: 0.5;
+}
+.Memory{
+  background: hsla(39, 100%, 56%,0.1);
+}
+.Verbal{
+background-color: hsla(166, 100%, 37%,.1);
+}
+.Visual{
+  background:hsla(234, 85%, 45%,.1);
+}
+button{
+ width: 300px;
+ padding: 18px;
+font-size: 20px;
+font-family: var(--font);
+font-weight: 300;
+border: none;
+border-radius:30px;
+background-color: var(--Darkgrayblue);
+color: var(--White);
+margin-top: 30px;
+transition: 0.3s;
+}
+button:hover{
+  background-color: var(--Cobaltblue);
+}
+
+@media screen and (max-width:500px) {
+  body{
+  align-items: flex-start;
+  }
+  
+  .card{
+    flex-direction: column;
+    width:80%
+  }
+  .card-image{
+    padding: 35px 85px 45px;
+  }
+  
+}
+
+@media screen and (max-width:400px){
+  .card{
+    width:90%;
+  }
+.result{
+  width:160px;
+  height:160px;
+}
+
+.result h1{
+  font-size: 50px;
+}
+.card-image {
+   padding:  35px 50px 45px;
+}
+button{
+   padding: 18px;
+   width:100%;
+}
+ .Reaction,.Memory,.Verbal,.Visual{
+  margin-bottom: 22px;
+  font-size: 17px ;
+  gap: 20%;
+ }
+}
+
+
+
+
+
+
+
+
