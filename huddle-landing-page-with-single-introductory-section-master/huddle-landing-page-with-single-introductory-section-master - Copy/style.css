@@ -1,0 +1,157 @@
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --SoftMagenta: hsl(300, 69%, 71%);
+  --Headings: 'Poppins', sans-serif;
+  --Body: 'Open Sans', sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 109%;
+}
+body {
+  background-image: url(images/bg-desktop.svg);
+  background-color: var(--Violet);
+  background-repeat: no-repeat;
+  height: 109%;
+  background-size: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--Headings);
+  color: white;
+  word-spacing: 2px;
+  font-weight: 600;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 90px;
+}
+.logo {
+  margin-top: 60px;
+  margin-left: 70px;
+}
+.description {
+  margin-top: 35px;
+}
+.description p {
+  font-family: var(--Body);
+  font-size: 15px;
+  margin-top: 20px;
+  color: white;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 35px;
+}
+.description button {
+  margin-top: 20px;
+  padding: 14px 60px;
+  border-radius: 30px;
+  border: none;
+  font-family: var(--Headings);
+  color: var(--Violet);
+  font-size: 18px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+  transition: 0.3s;
+}
+.description button:hover {
+  background: var(--SoftMagenta);
+  color: white;
+}
+
+footer {
+  float: right;
+  margin-right: 60px;
+}
+footer i {
+  font-size: 18px;
+  text-align: center;
+  margin-right: 15px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+}
+footer i:hover {
+  color: var(--SoftMagenta);
+  border: 1px solid var(--SoftMagenta);
+}
+@media screen and (max-width: 550px) {
+  body {
+    background-image: url(images/bg-mobile.svg);
+    background-size: cover;
+    /* background-position: center; */
+    height: 170%;
+  }
+  .logo {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .logo img {
+    margin: 0 auto;
+    display: block;
+  }
+  .content {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .content .image img {
+    width: 100%;
+  }
+  .content .description {
+    text-align: center;
+  }
+  .content .description p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: 98%;
+  }
+  footer i {
+    position: relative;
+    left: -50%;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  /* .logo img {
+    margin: 0 auto;
+    display: block;
+    margin-left: 0px;
+  } */
+
+  body {
+    height: 200%;
+  }
+
+  .content {
+    justify-content: center;
+  }
+
+  .content .image img {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  footer i {
+    position: relative;
+    left: -40%;
+    margin-top: 100px;
+  }
+}
