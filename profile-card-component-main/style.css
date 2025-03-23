@@ -1,0 +1,92 @@
+*{
+margin:0;
+padding: 0;
+box-sizing: border-box;
+}
+:root{
+ --Darkcyan: hsl(185, 75%, 39%);
+--Verydarkdesaturatedblue: hsl(229, 23%, 23%);
+--Darkgrayishblue: hsl(227, 10%, 46%);
+--Darkgray: hsl(0, 0%, 59%);
+
+  --font: 'Kumbh Sans', sans-serif;
+}
+
+body,html{
+  height:100%;
+}
+body{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font);
+  background-color: var(--Darkcyan);
+  background-image: url(images/bg-pattern-top.svg),url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+ 
+  background-position:left -280px bottom 200px, right -200px top 270px ; 
+}
+
+.card{
+  width:350px;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 20px rgba(0, 0, 0,0.1);
+}
+.empty img{
+  border-radius: 10px 10px 0 0;
+}
+
+
+.profile img{
+  border-radius: 50%;
+ margin-top: -50px;
+  border: 07px solid white;
+
+}
+.profile h1{
+ color:var(--Darkgrayishblue);
+ font-weight: 700;
+ font-size: 18px;
+
+}
+.profile span{
+  color:var(--Darkgray);
+  font-weight: 400;
+}
+.profile .location{
+  color:var(--Darkgrayishblue);
+  font-weight: 400;
+  margin-top:10px;
+  margin-bottom:18px ;
+}
+
+.stats {
+  display:flex;
+  justify-content: space-between;
+  margin:25px 20px
+}
+
+.key-stats h1{
+font-size: 18px;
+font-weight: 700;
+}
+
+.key-stats h5{
+  color: var(--Darkgrayishblue);
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-top: 10px;
+} 
+
+
+
+@media screen and (max-width:500px) {
+  body{
+  background-size: contain;
+  }
+}
+
+
