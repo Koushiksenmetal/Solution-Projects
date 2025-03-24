@@ -1,0 +1,149 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --Moderateviolet: hsl(263, 55%, 52%);
+--Verydarkgrayishblue: hsl(217, 19%, 35%);
+--Verydarkblackishblue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+--Lightgray: hsl(0, 0%, 81%);
+--Lightgrayishblue: hsl(210, 46%, 95%);
+--font: Barlow Semi Condensed;
+}
+body,html{
+  height: 120%;
+}
+
+body{
+  font-family: var(--font);
+  display: flex;
+  justify-content: center;
+background-color: var(--Lightgrayishblue);
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: 600;
+}
+h4{
+color:var(--Lightgrayishblue)
+}
+.Whittle h4,.Harmon h4{
+  color: black;
+}
+.Whittle h5,.Harmon h5{
+  color: black;
+  opacity: 50%;
+}
+.Clifford-img,.Walters-img,.Whittle-img,.Harmon-img,.Abrams-img{
+  display: flex;
+}
+.Clifford-img img,.Walters-img img,.Whittle-img img,.Harmon-img img,.Abrams-img img{
+  width:28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+p{
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 20px;
+}
+.all{
+  height: 575px;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-rows:0.5fr 0.01fr;
+grid-template-areas: 
+"Clifford Clifford Walters Whittle"
+"Harmon Abrams Abrams Whittle"
+;
+padding:100px;
+gap:30px;
+}
+.Clifford h5, .Walters h5,.Abrams h5{
+color:var(--Lightgrayishblue);
+opacity: 50%;
+}
+.Clifford h3, .Walters h3,.Abrams h3{
+color:var(--Lightgrayishblue);
+}
+.Clifford p, .Walters p,.Abrams p{
+color:var(--Lightgray);
+opacity:75%;
+
+}
+
+ .Clifford{
+background-color: var(--Moderateviolet); 
+grid-area:Clifford ;
+padding: 30px;
+border-radius: 10px;
+background-image: url(images/bg-pattern-quotation.svg);
+background-repeat: no-repeat;
+background-position: 80% 0 ;
+}
+ .Walters{
+ background-color:var(--Verydarkgrayishblue);
+grid-area:Walters ;
+padding: 30px;
+border-radius: 10px;
+ }
+.Whittle{
+background-color:var(--White) ;
+grid-area:Whittle ;
+padding: 30px;
+border-radius: 10px;
+box-shadow: 16px 16px 20px  rgba(0, 0, 0,0.2);
+}
+.Harmon{
+background-color:var(--White);
+grid-area:Harmon ;
+padding: 30px;
+border-radius: 10px;
+box-shadow: 0px 16px 20px  rgba(0, 0, 0,0.2);
+}
+.Abrams{
+padding: 30px;
+ background-color: var(--Verydarkblackishblue); 
+grid-area:Abrams;
+border-radius: 10px;
+box-shadow: 0px 16px 20px  rgba(0, 0, 0,0.2);
+}
+@media screen and (max-width:500px) {
+  body,html{
+  height:185%;
+  /* display: flex;
+  justify-content: center;
+   align-items: center; */
+  }
+  .all{
+    display:flex;
+    flex-direction:column;
+    padding:0px;
+    /* justify-content: center;
+    align-items: center; */
+    margin-top: 150px;
+  }
+   .Clifford{
+    width:325px;
+     height:423px;  
+   }
+   .Walters{
+      width:325px;
+   }
+.Whittle{
+order:5;
+   width:325px;
+}
+.Harmon{
+order:3;
+   width:325px;
+}
+.Abrams{
+order:4;
+  width:325px;
+} 
+}
